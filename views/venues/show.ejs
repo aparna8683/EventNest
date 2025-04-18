@@ -1,0 +1,20 @@
+<%- layout("layouts/boilerplate") %>
+<body>
+    <h3>Venue Details:</h3>
+    <ul>
+        <li> <%= venue.name %></li>
+        <li> <%= venue.location %></li>
+        <li> &#8377; <%= venue.pricePerHour.toLocaleString("en-IN") %></li>
+        <li> <%= venue.amenities %></li>
+        <li> <%= venue.capacity %></li>
+        <li> <%= venue.rating %></li>
+        <li> <%= venue.description %></li>
+        <li> <%= venue.createdAt %></li>
+    </ul>
+    <a href="/venues/<%= venue._id %>/edit">Edit this Venue</a>
+    <br><br>
+    <form method="POST" action="/venues/<%= venue._id %>?_method=Delete">
+        <button>Delete This Venue</button>
+    </form>
+</body>
+</html>

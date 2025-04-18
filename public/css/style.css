@@ -1,0 +1,96 @@
+/* body{
+    background-color: pink;
+} */
+body {
+  background-color: pink;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white !important;
+  border-bottom: 1px solid #ccc;
+}
+.fa-calendar-days {
+  color: rgb(87, 44, 10);
+  font-size: 2rem;
+}
+.nav-link {
+  color: black !important;
+}
+.f-info-links a  {
+    text-decoration: none;
+    color: #222222;
+  }
+.f-info-links a:hover {
+  text-decoration: underline;
+}
+.f-info-socials,.f-info-links{
+    width: 100%;
+    /* margin-right: 2rem; */
+    vertical-align: middle;
+}
+.f-info-socials i{
+    margin-right: .5rem;
+        font-size: 1.1rem;
+
+}
+.f-info {
+    text-align: center;
+  height: 5rem;
+  display: flex;
+  background-color: #989595;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: space-evenly;
+}
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.card-body{
+    padding: 0;
+}
+.custom-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    flex-grow: 1;
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  h2 {
+    font-weight: 700;
+  }
+  

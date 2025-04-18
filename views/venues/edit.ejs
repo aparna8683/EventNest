@@ -1,0 +1,39 @@
+<%- layout("layouts/boilerplate") %>
+
+<body>
+    <h3>Edit your venue</h3>
+    <form method="post" action="/venues/<%= venue._id %>?_method=PUT">
+        
+        <input name="venue[name]" type="text" value="<%= venue.name %>" placeholder="Venue Name">
+        <br>
+
+        <input name="venue[location]" type="text" value="<%= venue.location %>" placeholder="Enter the location">
+        <br>
+
+        <input name="venue[pricePerHour]" type="number" value="<%= venue.pricePerHour %>" placeholder="Enter the price per hour">
+        <br>
+
+        <input type="text" name="venue[images]" value="<%=venue.images.length>0? venue.images[0]:'' %>" placeholder="Enter image URL">
+        <br>
+
+        <label>Amenities:</label><br>
+        <input type="checkbox" name="venue[amenities]" value="WiFi" <%= venue.amenities.includes("WiFi") ? "checked" : "" %>> WiFi<br>
+        <input type="checkbox" name="venue[amenities]" value="Catering" <%= venue.amenities.includes("Catering") ? "checked" : "" %>> Catering<br>
+        <input type="checkbox" name="venue[amenities]" value="Sound System" <%= venue.amenities.includes("Sound System") ? "checked" : "" %>> Sound System<br>
+        <input type="checkbox" name="venue[amenities]" value="Table" <%= venue.amenities.includes("Table") ? "checked" : "" %>> Table<br>
+        <input type="checkbox" name="venue[amenities]" value="Projector" <%= venue.amenities.includes("Projector") ? "checked" : "" %>> Projector<br>
+        <br>
+
+        <textarea name="venue[description]" placeholder="Enter description"><%= venue.description %></textarea>
+        <br>
+
+        <input type="number" name="venue[rating]" value="<%= venue.rating %>" placeholder="Enter rating">
+        <br>
+
+        <input name="venue[capacity]" type="number" value="<%= venue.capacity %>" placeholder="Enter the capacity">
+        <br>
+
+        <button>Update Venue</button>
+    </form>
+</body>
+

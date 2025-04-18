@@ -1,0 +1,42 @@
+
+    <%- layout("layouts/boilerplate") %>
+
+</head>
+<body>
+    <h3>Create a New Venue</h3>
+    <form method="post" action="/venues">
+        
+        <input name="venue[name]" type="text" placeholder="Venue Name">
+        <br>
+
+        <input name="venue[location]" type="text" placeholder="Enter the location">
+        <br>
+
+        <input name="venue[pricePerHour]" type="number" placeholder="Enter the price per hour">
+        <br>
+
+        <input type="text" name="venue[images]" placeholder="Enter image URL">
+        <br>
+
+        <label>Amenities:</label><br>
+        <input type="checkbox" name="venue[amenities]" value="WiFi"> WiFi<br>
+        <input type="checkbox" name="venue[amenities]" value="Catering"> Catering<br>
+        <input type="checkbox" name="venue[amenities]" value="Sound System"> Sound System<br>
+        <input type="checkbox" name="venue[amenities]" value="Table"> Table<br>
+        <input type="checkbox" name="venue[amenities]" value="Projector"> Projector<br>
+        <br>
+
+        <textarea name="venue[description]" placeholder="Enter description"></textarea>
+        <br>
+
+        <input type="number" name="venue[rating]" placeholder="Enter rating">
+        <br>
+
+        <input name="venue[capacity]" type="number" placeholder="Enter the capacity">
+        <br>
+
+        <button>Create Venue</button>
+
+    </form>
+</body>
+</html>
